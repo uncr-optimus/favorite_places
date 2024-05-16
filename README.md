@@ -1,4 +1,4 @@
-# favorite_places
+# assignment_map
 
 A new Flutter project.
 

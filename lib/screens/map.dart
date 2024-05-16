@@ -1,4 +1,4 @@
-import 'package:favorite_places/models/place.dart';
+import 'package:assignment_map/models/place.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -33,7 +33,7 @@ class _MapScreenState extends State<MapScreen> {
         actions: [
           if (widget.isSelecting)
             IconButton(
-              icon: Icon(Icons.save),
+              icon: const Icon(Icons.save),
               onPressed: () {
                 Navigator.of(context).pop(_pickedLocation);
               },
@@ -56,7 +56,7 @@ class _MapScreenState extends State<MapScreen> {
             ? {}
             : {
                 Marker(
-                  markerId: MarkerId('m1'),
+                  markerId: const MarkerId('m1'),
                   position: _pickedLocation ??
                       LatLng(
                           widget.location.latitude, widget.location.longitude),

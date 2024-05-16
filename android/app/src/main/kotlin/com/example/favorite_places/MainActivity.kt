@@ -1,4 +1,4 @@
-package com.example.favorite_places
+package com.example.assignment_map
 
 import io.flutter.embedding.android.FlutterActivity
 

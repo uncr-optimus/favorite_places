@@ -35,8 +35,8 @@ class _ImageInputState extends State<ImageInput> {
   Widget build(BuildContext context) {
     Widget content = TextButton.icon(
       onPressed: _takePicture,
-      icon: Icon(Icons.camera),
-      label: Text('Take Picture'),
+      icon: const Icon(Icons.camera),
+      label: const Text('Take Picture'),
     );
     if (_selectedImage != null) {
       content = GestureDetector(
