@@ -1,5 +1,5 @@
-import 'package:assignment_map/models/place.dart';
-import 'package:assignment_map/screens/map.dart';
+import 'package:favorite_places/models/place.dart';
+import 'package:favorite_places/screens/map.dart';
 import 'package:flutter/material.dart';
 
 class PlaceDetailScreen extends StatelessWidget {
@@ -10,7 +10,7 @@ class PlaceDetailScreen extends StatelessWidget {
     // a getter which will return String
     final lat = place.location.latitude;
     final lng = place.location.longitude;
-    return 'https://maps.googleapis.com/maps/api/staticmap?center$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:AS%7C$lat,$lng&key=xyz';
+    return 'https://maps.googleapis.com/maps/api/staticmap?center$lat,$lng=&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:AS%7C$lat,$lng&key=AIzaSyC_EMfcVXMp7s_tAZgsQVG9yIiWM-_615E';
   }
 
   @override
@@ -21,6 +21,12 @@ class PlaceDetailScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
+          Image.file(
+            place.image,
+            fit: BoxFit.cover,
+            height: double.infinity,
+            width: double.infinity,
+          ),
           Positioned(
             bottom: 0,
             left: 0,
@@ -34,6 +40,7 @@ class PlaceDetailScreen extends StatelessWidget {
                         builder: (context) => MapScreen(
                           location: place.location,
                           isSelecting: false,
+                          
                         ),
                       ),
                     );
@@ -45,8 +52,7 @@ class PlaceDetailScreen extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(colors: [
                       Colors.transparent,

@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.assignment_map">
+    package="com.example.favorite_places">
    <application
-        android:label="assignment_map"
+        android:label="favorite_places"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="xyz"/>
+               android:value="AIzaSyC_EMfcVXMp7s_tAZgsQVG9yIiWM-_615E"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

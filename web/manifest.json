@@ -1,6 +1,6 @@
 {
-    "name": "assignment_map",
-    "short_name": "assignment_map",
+    "name": "favorite_places",
+    "short_name": "favorite_places",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
